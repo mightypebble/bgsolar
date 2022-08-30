@@ -1,6 +1,25 @@
 // theme colors
 $theme-color-primary: var(--cez-primary);
 $theme-color-secondary: var(--cez-secondary);
+$white: #fff;
+$black: #000;
+$grey: #666;
+$light-grey: #ccc;
 
 // typography
 $theme-font-base: 16px;
+$font-size-15: 15px;
+$font-size-18: 18px;
+$font-size-20: 20px;
+
+//properties
+
+//other
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 1024px,
+        xl: 1200px,
+        xxl: 1920px
+);
