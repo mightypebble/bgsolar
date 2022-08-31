@@ -17,7 +17,6 @@ class Header{
     menuToggle() {
         this.menuToggleOn.addEventListener('click', () => {
             this.menu.style.top = '0';
-            console.log(this.menu.offsetHeight);
         })
         this.menuToggleOff.addEventListener('click', () => {
             this.menu.style.top = `-${this.menu.offsetHeight}px`;
