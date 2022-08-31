@@ -11,8 +11,27 @@ $theme-font-base: 16px;
 $font-size-15: 15px;
 $font-size-18: 18px;
 $font-size-20: 20px;
+$font-size-22: 22px;
+$font-size-25: 25px;
+$font-size-50: 50px;
+$font-blazma: blazma;
+@font-face {
+        font-family: $font-blazma;
+        src: url('../assets/fonts/Blazma-515KZ.ttf') format('truetype');
+}
+$font-blazma-italic: blazma-italic;
+@font-face {
+        font-family: $font-blazma-italic;
+        src: url('../assets/fonts/BlazmaItalic-6Y52q.ttf') format('truetype');
+}
+$font-seldomscene: seldomscene;
+@font-face {
+        font-family: $font-seldomscene;
+        src: url('../assets/fonts/SeldomScene-B6lG.ttf') format('truetype');
+}
 
 //properties
+$background-transparent: transparent;
 
 //other
 $grid-breakpoints: (

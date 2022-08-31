@@ -1,24 +1,26 @@
 const selectors = {
-    menuToggleButton: '.navbar__menu-toggle',
+    menuToggleOn: '.navbar__menu-toggle--on',
+    menuToggleOff: '.menu__toggle--off',
     menu: '.menu',
 }
 
 class Header{
     constructor (container) {
         this.container = container;
-        this.menuToggleButton = this.container.querySelector(selectors.menuToggleButton);
+        this.menuToggleOn = this.container.querySelector(selectors.menuToggleOn);
+        this.menuToggleOff = this.container.querySelector(selectors.menuToggleOff);
         this.menu = this.container.querySelector(selectors.menu);
         
         this.initEvents();
     }
 
     menuToggle() {
-        this.menuToggleButton.addEventListener('click', () => {
-            if (this.menu.style.left !== '0px') {
-                this.menu.style.left = '0';
-            } else {
-                this.menu.style.left = '100%';
-            }
+        this.menuToggleOn.addEventListener('click', () => {
+            this.menu.style.top = '0';
+            console.log(this.menu.offsetHeight);
+        })
+        this.menuToggleOff.addEventListener('click', () => {
+            this.menu.style.top = `-${this.menu.offsetHeight}px`;
         })
     }
 
