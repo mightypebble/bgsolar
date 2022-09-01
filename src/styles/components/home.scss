@@ -1,0 +1,90 @@
+.home{
+    height: 100vh;
+    /* stylelint-disable */
+    background-image: url('../../assets/images/Solarpanel.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    /* stylelint-enable */
+
+    @include media-breakpoint-up(lg) {
+        background-position: top; // stylelint-disable-line
+    }
+}
+
+.home__badge-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    text-align: center;
+    padding-top: 20%;
+
+    @include media-breakpoint-up(lg) {
+        grid-template-rows: auto;
+        grid-template-columns: auto auto auto;
+        padding: 0;
+        top: 50%;
+    }
+}
+
+.home__badge{
+    display: inline-block;
+    color: $white;
+    font-size: $font-size-25;
+    font-family: $font-seldomscene;
+    opacity: 0;
+    padding-top: 0;
+    transition: 1s;
+}
+
+.home__badge--fade{
+    padding-top: 30px;
+    opacity: 1;
+}
+
+.home__icon-1{
+
+    &::after{
+        content: '';
+        /* stylelint-disable */
+        background-image: url('../../assets/truck.svg');
+        background-size: cover;
+        /* stylelint-enable */
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+
+    }
+}
+
+.home__icon-2{
+
+    &::after{
+        content: '';
+        /* stylelint-disable */
+        background-image: url('../../assets/tools.svg');
+        background-size: cover;
+        /* stylelint-enable */
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+
+    }
+}
+
+.home__icon-3{
+
+    &::after{
+        content: '';
+        /* stylelint-disable */
+        background-image: url('../../assets/award.svg');
+        background-size: cover;
+        /* stylelint-enable */
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+
+    }
+}
