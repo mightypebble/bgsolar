@@ -1,11 +1,13 @@
 .navbar{
     position: absolute;
     background-color: $background-transparent;
+    color: $white;
     height: 30px;
     font-family: $font-seldomscene;
     font-size: $font-size-15;
     left: 50%;
     transform: translate(-50%);
+    z-index: 1;
 
     @include media-breakpoint-up(lg) {
         height: 50px;
@@ -29,12 +31,12 @@
 
 .navbar__anchor{
     display: none;
-    color: $black;
+    color: $white;
     text-decoration: none;
     padding: 0 20px;
 
     &:hover{
-        color: $grey;
+        color: $light-grey;
         text-decoration: none;
     }
 
@@ -56,6 +58,7 @@
     text-align: center;
     font-family: $font-seldomscene;
     font-size: $font-size-15;
+    z-index: 2;
 
     @include media-breakpoint-up(lg) {
         display: none;

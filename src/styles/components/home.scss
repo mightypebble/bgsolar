@@ -1,0 +1,132 @@
+.home{
+    height: 100vh;
+    font-family: $font-seldomscene;
+    /* stylelint-disable */
+    background-image: url('../../assets/images/Solarpanel.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* stylelint-enable */
+
+    @include media-breakpoint-up(lg) {
+        background-position: top; // stylelint-disable-line
+    }
+}
+
+.home__title-container{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0;
+    transition: 1s;
+
+    .home__title{
+        font-size: $font-size-30;
+        color: $white;
+        word-spacing: 10px;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-38;
+        }
+    }
+}
+
+.home__badge-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    text-align: center;
+    padding-top: 140px;
+
+    @include media-breakpoint-up(md) {
+        grid-template-rows: auto;
+        grid-template-columns: auto auto auto;
+        padding: 0 50px;
+        left: 50%;
+        transform: translate(-50%);
+        top: 52%;
+    }
+}
+
+.home__badge{
+    display: inline-block;
+    color: $white;
+    font-size: $font-size-18;
+    opacity: 0;
+    padding-top: 0;
+    transition: 1s;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-25;
+    }
+}
+
+.home__icon-1{
+
+    &::after{
+        content: '';
+        /* stylelint-disable */
+        background-image: url('../../assets/truck.svg');
+        background-size: cover;
+        /* stylelint-enable */
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+
+        @include media-breakpoint-up(lg) {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
+
+.home__icon-2{
+
+    &::after{
+        content: '';
+        /* stylelint-disable */
+        background-image: url('../../assets/tools.svg');
+        background-size: cover;
+        /* stylelint-enable */
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        
+        @include media-breakpoint-up(lg) {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
+
+.home__icon-3{
+
+    &::after{
+        content: '';
+        /* stylelint-disable */
+        background-image: url('../../assets/award.svg');
+        background-size: cover;
+        /* stylelint-enable */
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+
+        @include media-breakpoint-up(lg) {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
+
+.home__element--fade-in{
+    padding-top: 50px;
+    opacity: 1;
+
+    @include media-breakpoint-up(lg) {
+        padding-top: 100px;
+    }
+}
