@@ -1,20 +1,21 @@
 const selectors = {
-    badge: '.home__badge',
+    fade_element: '.home__fade-element',
+    fade_in: 'home__element--fade-in',
 }
 
 class Home {
     constructor(container) {
         this.container = container;
-        this.badges = this.container.querySelectorAll('.home__badge');
+        this.fadeElements = this.container.querySelectorAll(selectors.fade_element);
         
         this.initEvents();
     }
 
     badgeAppearance() {
         let index = 1;
-        this.badges.forEach(element => {
+        this.fadeElements.forEach(element => {
             const t = setInterval(function(){
-                element.classList.add('home__badge--fade');
+                element.classList.add(selectors.fade_in);
             }, 1000 * index);
             index += 1;
         });

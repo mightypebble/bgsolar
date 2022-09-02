@@ -1,6 +1,7 @@
 .navbar{
     position: absolute;
     background-color: $background-transparent;
+    color: $white;
     height: 30px;
     font-family: $font-seldomscene;
     font-size: $font-size-15;
@@ -30,12 +31,12 @@
 
 .navbar__anchor{
     display: none;
-    color: $black;
+    color: $white;
     text-decoration: none;
     padding: 0 20px;
 
     &:hover{
-        color: $grey;
+        color: $light-grey;
         text-decoration: none;
     }
 
