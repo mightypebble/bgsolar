@@ -1,8 +1,5 @@
 .products{
-    height: 100vh;
-    width: 100%;
-    display: grid;
-    grid-template-rows: 50% 50%;
+    
 }
 
 .products__images{
@@ -15,10 +12,98 @@
         left: 50%;
         transform: translate(-50%);
     }
+
+    @include media-breakpoint-up(lg) {
+        width: 100%;
+        display: inline-block;
+    }
 }
 
 .products__description{
+    position: relative;
     width: 100%;
     display: block;
     background-color: $black;
+    color: $white;
+    text-align: left;
+    font-family: $font-blazma;
+    font-size: $font-size-15;
+
+    .products__text-wrapper{
+        padding: 5%;
+
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .products__model{
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 50px;
+            font-size: $font-size-50;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: inline-block;
+        font-size: $font-size-18;
+    }
+}
+
+.products__swiper{
+    height: 100vh;
+    width: 100%;
+
+    .swiper-slide{
+        display: grid;
+        grid-template-rows: 50% auto;
+
+        @include media-breakpoint-up(lg) {
+            grid-template-rows: 100%;
+            grid-template-columns: 50% 50%;
+        }
+    }
+
+    .swiper-button-next::after, .swiper-button-prev::after {
+        content: "";
+    }
+
+    .swiper-button-next{
+        content: '';
+        /* stylelint-disable */
+        background-image: url('../../assets/arrow-black.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* stylelint-enable */
+        width: 50px;
+        height: 50px;
+        transform: rotate(180deg);
+        top: 25%;
+
+        @include media-breakpoint-up(lg) {
+            top: 50%;
+            background-image: url('../../assets/arrow-white.svg'); // stylelint-disable-line
+        }
+    }
+
+    .swiper-button-prev{
+        content: '';
+        /* stylelint-disable */
+        background-image: url('../../assets/arrow-black.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* stylelint-enable */
+        width: 50px;
+        height: 50px;
+        top: 25%;
+
+        @include media-breakpoint-up(lg) {
+            top: 50%;
+        }
+    }
 }
