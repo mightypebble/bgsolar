@@ -2,6 +2,7 @@
     position: absolute;
     background-color: $background-transparent;
     color: $white;
+    -webkit-text-stroke: 1px $black;
     height: 30px;
     font-family: $font-seldomscene;
     font-size: $font-size-15;
