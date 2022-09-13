@@ -1,13 +1,10 @@
-.products{
-    
-}
-
 .products__images{
     width: 100vw;
     display: block;
     padding: 5%;
 
     .products__image{
+        width: 100%;
         position: relative;
         left: 50%;
         transform: translate(-50%);
@@ -56,12 +53,11 @@
 }
 
 .products__swiper{
-    height: 100vh;
     width: 100%;
 
-    .swiper-slide{
+    .swiper-slide{ // this is essentially the entire page
         display: grid;
-        grid-template-rows: 50% auto;
+        grid-template-rows: min-content 1fr;
 
         @include media-breakpoint-up(lg) {
             grid-template-rows: 100%;
