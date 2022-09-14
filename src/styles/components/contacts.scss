@@ -1,0 +1,122 @@
+.contacts{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    font-family: $font-blazma;
+    font-size: $font-size-20;
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        padding-bottom: 50px;
+    }
+}
+
+.contacts__header{
+    font-size: $font-size-25;
+
+    @include media-breakpoint-up(lg) {
+        grid-column: span 3;
+    }
+}
+
+.contacts__form{
+    border: 5px $black solid;
+    background-color: $white;
+    display: grid;
+    grid-template-rows: 1fr 2fr 0.5fr;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 100%;
+    transition: 0.3s;
+
+    @include media-breakpoint-up(lg) {
+        position: relative;
+        right: auto;
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+
+.contacts__form-item{
+    display: block;
+    margin: 20px;
+    border: 3px $black solid;
+
+}
+
+.contacts__form-buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include media-breakpoint-up(lg) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contacts__form-item--close{
+    padding: 20px;
+    display: inline-block;
+    color: $red;
+    border-color: $danger;
+
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
+.contacts__form-item--send{
+    padding: 20px;
+    display: inline-block;
+    border-color: $send;
+}
+
+.contacts__mail-icon{
+    &::after{
+        content: '';
+        /* stylelint-disable */
+        background-image: url('../../assets/mail.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* stylelint-enable */
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+    }
+}
+
+.contacts__phone-icon{
+    &::after{
+        content: '';
+        /* stylelint-disable */
+        background-image: url('../../assets/phone.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* stylelint-enable */
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+    }
+}
+
+.contacts__form--show{
+    text-decoration: none;
+    color: $black;
+    border: 3px $black solid;
+    padding: 10px;
+    margin: auto;
+
+    &:hover{
+        color: $grey;
+        border: 3px $grey solid;
+        text-decoration: none;
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
