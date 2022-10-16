@@ -4,7 +4,8 @@
     grid-template-rows: 50% 50%;
     color: $white;
     text-align: center;
-    font-family: $font-blazma;
+    font-family: $font-salmapro;
+    font-weight: 900;
 
     @include media-breakpoint-up(lg) {
         grid-template-rows: 100%;
@@ -38,6 +39,10 @@
         @include media-breakpoint-up(lg) {
             font-size: $font-size-50;
         }
+    }
+
+    .services__text--small{
+        font-size: $font-size-15;
     }
 
     @include media-breakpoint-up(lg) {

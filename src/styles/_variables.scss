@@ -35,6 +35,11 @@ $font-seldomscene: seldomscene;
         font-family: $font-seldomscene;
         src: url('../assets/fonts/SeldomScene-B6lG.ttf') format('truetype');
 }
+$font-salmapro: salmapro;
+@font-face {
+        font-family: $font-salmapro;
+        src: url('../assets/fonts/SalmaproMedium-0Wooo.otf');
+}
 
 //properties
 $background-transparent: transparent;
