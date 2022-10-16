@@ -1,0 +1,53 @@
+.services{
+    background-color: $black;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    color: $white;
+    text-align: center;
+    font-family: $font-salmapro;
+    font-weight: 900;
+
+    @include media-breakpoint-up(lg) {
+        grid-template-rows: 100%;
+        grid-template-columns: 50% 50%;
+    }
+}
+
+.services__image{
+    /* stylelint-disable */
+    background-image: url('../../assets/images/workers.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* stylelint-enable */
+    height: 50vh;
+    
+    @include media-breakpoint-up(lg) {
+        height: 100vh;
+        order: 2;
+    }
+}
+
+.services__text{
+    margin-bottom: 50px;
+    font-size: $font-size-22;
+
+    .services__title{
+        margin-bottom: 50px;
+        font-size: $font-size-40;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-50;
+        }
+    }
+
+    .services__text--small{
+        font-size: $font-size-15;
+    }
+
+    @include media-breakpoint-up(lg) {
+        height: 100vh;
+        padding: 100px;
+        font-size: $font-size-30;
+    }
+}
