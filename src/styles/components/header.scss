@@ -54,7 +54,7 @@
     row-gap: 10px;
     padding: 10px 0;
     top: -317px; // this should always be equal to the menu' height
-    background-color: $black;
+    background-image: linear-gradient($dark-blue, $light-blue);
     transition: 0.3s;
     text-align: center;
     font-family: $font-seldomscene;
